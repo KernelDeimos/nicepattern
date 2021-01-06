@@ -13,7 +13,7 @@ There are many uses for this kind of pattern, including:
 
 ### Example: Basic Example
 
-```
+```javascript
 const { Sequence } = require('nicepattern');
 
 var seq = new Sequence([
@@ -30,7 +30,7 @@ seq();
 Items in a sequence can be given an identifier. Doing this consistently
 makes it easy to insert new items around them or remove them later.
 
-```
+```javascript
 const { Sequence } = require('nicepattern');
 
 var seq = new Sequence([
@@ -61,7 +61,7 @@ passed when calling the sequence.
 Additional arguments may be passed when calling the sequence, and these
 will be available to all items.
 
-```
+```javascript
 const { Sequence } = require('nicepattern');
 
 var seq = new Sequence([
@@ -87,7 +87,7 @@ a promise. It is possible to disable this behaviour when constructing a
 sequence, which makes it possible to build promise chains using a
 sequence as well.
 
-```
+```javascript
 const { Sequence } = require('nicepattern');
 
 var asyncTest = async () => {

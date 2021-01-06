@@ -10,7 +10,7 @@ for ( let example of examples ) {
   console.log([
     `### Example: ${ example.title }`, '',
     ...(example.explain ? [example.explain, ''] : []),
-    "```",
+    "```javascript",
     `const { Sequence } = require('nicepattern');`, '',
     dedent(code).trim(),
     "```", '',
