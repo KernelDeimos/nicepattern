@@ -1,0 +1,14 @@
+{
+  "name": "nicepattern",
+  "version": "1.0.0",
+  "description": "A collection of helpful patterns built with ES6 classes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KernelDeimos",
+  "license": "MIT",
+  "dependencies": {
+    "dedent-js": "^1.0.1"
+  }
+}
