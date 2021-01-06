@@ -16,6 +16,15 @@ module.exports = [
     module: require('./sequence_object_example.js'),
   },
   {
+    title: 'Inserting',
+    category: 'Sequence',
+    explain: dedent`
+      Inserting new items into a sequence is a great way to decouple conditional
+      logic from a complex flow, or to allow plugins in inject custom behaviour.
+    `.trim(),
+    module: require('./sequence_insert_example.js'),
+  },
+  {
     title: 'Arguments',
     category: 'Sequence',
     explain: dedent`
