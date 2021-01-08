@@ -8,20 +8,23 @@ module.exports = () => {
     { name: 'cleanup', fn: () => console.log('cleanup') },
   ]);
 
+  seq2 = seq.clone();
 
-
-  seq.insertAfter('init', {
+  seq2.insertAfter('init', {
     name: 'pluginInit',
     fn: () => console.log('pluginInit'),
   });
 
-  seq.insertBefore('default', {
+  seq2.insertBefore('default', {
     name: 'conditionalBehaviour',
     fn: () => console.log('conditionalBehaviour'),
   });
 
-  // Prints: init, pluginInit, conditionalBehaviour, default, cleanup
+  // Prints: init, default, cleanup
   seq();
+
+  // Prints: init, pluginInit, conditionalBehaviour, default, cleanup
+  seq2();
 }
 
 if ( require.main == module ) module.exports();
