@@ -9,7 +9,7 @@ individual steps can be later removed, added, reconfigured, or rearranged.
 There are many uses for this kind of pattern, including:
 - Separating conditional logic from complex flows.
 - Providing away for plugins to add hooks within your framework.
-- Generating documentation for the steps in your code.
+- [Generating documentation](http://ericdube.com/article/sequence-documentation) for the steps in your code.
 
 ### Example: Basic Example
 
