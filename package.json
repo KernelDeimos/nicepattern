@@ -1,6 +1,6 @@
 {
   "name": "nicepattern",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A collection of helpful patterns built with ES6 classes",
   "main": "src/index.js",
   "scripts": {
