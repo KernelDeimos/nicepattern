@@ -88,11 +88,17 @@ class Sequence extends Function {
   insertAfter (name, func) {
     this.insert_(1, name, func);
   }
+  remove (name) {
+    var i = this.require_(name);
+    this.chain.splice(i, 1);
+  }
 
   replace (name, o) {
     var i = this.require_(name);
     if ( ! this.config.noAddName ) {
-      if ( ! o.name ) o.name = name;
+      if ( typeof o == 'function' ) {
+        o = { name: name, fn: o };
+      } else if ( ! o.name ) o.name = name;
     }
     this.chain[i] = o;
   }
