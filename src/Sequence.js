@@ -84,13 +84,16 @@ class Sequence extends Function {
 
   insertBefore (name, func) {
     this.insert_(0, name, func);
+    return this;
   }
   insertAfter (name, func) {
     this.insert_(1, name, func);
+    return this;
   }
   remove (name) {
     var i = this.require_(name);
     this.chain.splice(i, 1);
+    return this;
   }
 
   replace (name, o) {
@@ -101,6 +104,7 @@ class Sequence extends Function {
       } else if ( ! o.name ) o.name = name;
     }
     this.chain[i] = o;
+    return this;
   }
 
   clone () {
