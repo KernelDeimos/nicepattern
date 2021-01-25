@@ -2,6 +2,7 @@ const { Sequence } = require('./Sequence');
 
 function toChain(f, name) {
   if ( f instanceof Sequence ) return f.chain;
+  if ( Array.isArray(f) ) return f;
   return [f];
 }
 
@@ -22,6 +23,20 @@ class Middleware {
   }
 }
 
+class CompositeMiddleware {
+  constructor (middlewares, name) {
+    this.middlewares = middlewares;
+  }
+  apply (sequence) {
+    var s = sequence.clone();
+    for ( let middleware of this.middlewares ) {
+      s = middleware.apply(s);
+    }
+    return s;
+  }
+}
+
 module.exports = {
   Middleware: Middleware,
+  CompositeMiddleware: CompositeMiddleware,
 };

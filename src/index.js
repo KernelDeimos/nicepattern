@@ -1,7 +1,8 @@
 const { Sequence } = require('./Sequence');
-const { Middleware } = require('./Middleware');
+const { Middleware, CompositeMiddleware } = require('./Middleware');
 
 module.exports = {
   Sequence: Sequence,
   Middleware: Middleware,
+  CompositeMiddleware: CompositeMiddleware,
 };
